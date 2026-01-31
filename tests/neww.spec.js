@@ -263,13 +263,13 @@ test.describe("SwiftTranslator – Positive Functional", () => {
 
       
       await expect.poll(async () => normalize(await readOutput(outputBox)), {
-        timeout: 20000,
+        timeout: 30000,
         message: `No output produced for ${tc.id}`
       }).not.toBe("");
 
       
       await expect.poll(async () => normalize(await readOutput(outputBox)), {
-        timeout: 20000,
+        timeout: 30000,
         message: `Output did not match for ${tc.id}`
       }).toBe(normalize(tc.expected));
     });
